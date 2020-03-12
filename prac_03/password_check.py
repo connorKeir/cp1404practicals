@@ -1,9 +1,22 @@
-min_length = 7
+min_length = 4
 
-password = input("Please enter your password that is at least {} characters long: ".format(min_length))
 
-while len(password) < min_length:
-    password = input("That was too short, Try again: ")
+def main():
+    password = get_password()
 
-for i in range(0, len(password), 1):
-    print('*', end=' ')
+    while len(password) < min_length:
+        password = get_password()
+
+    asterisk_printer(password)
+
+
+def asterisk_printer(password):
+    for i in range(0, len(password), 1):
+        print('*', end=' ')
+
+
+def get_password():
+    return input("Please enter your password that is at least {} characters long: ".format(min_length))
+
+
+main()
