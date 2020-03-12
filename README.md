@@ -1,2 +1,3 @@
-# cp1404practicals
-My practical work for IT@JCU CP1404-EXTERNAL
+# Sandbox
+Project for various tests and experiments. Whislt the code and file contained in here may not have a clear purpose they have most 
+most likely created to aid in my understanding of a particular topic or it could be a personal experimentation.
