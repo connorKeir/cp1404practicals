@@ -9,11 +9,13 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
+    data_formatted(data)
 
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
+    subjects_data = []
     for line in input_file:
         print(line)  # See what a line looks like
         print(repr(line))  # See what a line really looks like
@@ -23,7 +25,18 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
+        subjects_data.append(parts)
+    return subjects_data
     input_file.close()
+
+
+def data_formatted(messy_data):
+    for element in messy_data:
+        # insert sentences to format data
+        element.insert(1, "is taught by")
+        element.insert(3, "and has")
+        element.insert(5, "students")
+        print(element)
 
 
 main()
