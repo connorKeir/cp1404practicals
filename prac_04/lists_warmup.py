@@ -40,6 +40,4 @@ def main():
     print(numbers)  # print numbers to preform a visual check of the functions
 
 
-
-
 main()
