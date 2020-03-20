@@ -25,18 +25,15 @@ def get_data():
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         print(parts)  # See if that worked
         print("----------")
-        subjects_data.append(parts)
+        subjects_data.append(parts)  # add the parts lists into the greater subjects_data list
     return subjects_data
     input_file.close()
 
 
 def data_formatted(messy_data):
-    for element in messy_data:
-        # insert sentences to format data
-        element.insert(1, "is taught by")
-        element.insert(3, "and has")
-        element.insert(5, "students")
-        print(element)
+    for i in range(0, len(messy_data)):
+        # Input data into a formatted text to print
+        print("{} is taught by {} and has {} students".format(messy_data[i][0], messy_data[i][1], messy_data[i][2]))
 
 
 main()
