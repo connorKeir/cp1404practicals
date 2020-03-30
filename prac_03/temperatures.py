@@ -17,10 +17,10 @@ def main():
             print("Result: {:.2f} F".format(fahrenheit))
         elif choice == "F":
             # celsius = 5 / 9 * (fahrenheit - 32)
-            fahrenheit = float(input("Fahrenheit: "))  # take user input data as Fahrenheit value
+            fahrenheit = float(input("Fahrenheit: "))
             celsius = fahrenheit_to_celsius(
-                fahrenheit)  # use the user given fahrenheit value and recalculate into celsius
-            print("Result: {:.2f} C".format(celsius))  # display the calculated value of celsius to 2 decimal points
+                fahrenheit)
+            print("Result: {:.2f} C".format(celsius))
         else:
             print("Invalid option")
         print(MENU)
