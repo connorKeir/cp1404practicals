@@ -1,2 +1,0 @@
-"""Connor Jack David Keir"""
-
