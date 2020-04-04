@@ -1,15 +1,13 @@
 def main():
-    count = 0  # initialise count at 0
-    numbers = []  # initialise numbers list
+    numbers = []
     usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface',
                  'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer',
                  'bob']  # initialise approved users list
 
     # basic list operations activities
-    while count < 5:  # ask for 5 numbers
+    for i in range(0, 5):
         number = int(input("Enter a number: "))  # add user input to number variable
         numbers.append(number)  # add number from user to list
-        count += 1
     print("The first number is {}".format(numbers[0]))
     print("The last number is {}".format(numbers[-1]))
     print("The smallest number is {}".format(min(numbers)))
@@ -23,10 +21,10 @@ def main():
     security_checker(username, usernames)
 
 
-
 def average_calculator_list(list):
     # calculate the average number in a list of integers
     return sum(list) / len(list)
+
 
 def security_checker(user, usernames):
     # check if the user is an approved user
