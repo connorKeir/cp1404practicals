@@ -28,7 +28,7 @@
 # check result = False
 
 # numbers + [6, 5, 3] result = [3, 1, 4, 5, 9, 6, 5, 3]
-# check result = [3, 1, 4, 5, 9, 2, 6, 5, 3]
+# check result = [3, 1, 4, 5, 9, 6, 5, 3]
 def main():
     numbers = [3, 1, 4, 5, 9, 2]  # create numbers list
 

@@ -9,7 +9,7 @@ FILENAME = "subject_data.txt"
 def main():
     data = get_data()
     print(data)
-    data_formatted(data)
+    format_data(data)
 
 
 def get_data():
@@ -30,7 +30,7 @@ def get_data():
     input_file.close()
 
 
-def data_formatted(messy_data):
+def format_data(messy_data):
     for i in range(0, len(messy_data)):
         # Input data into a formatted text to print
         print("{} is taught by {} and has {} students".format(messy_data[i][0], messy_data[i][1], messy_data[i][2]))
