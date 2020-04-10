@@ -1,11 +1,14 @@
 """CP1402 practical - programming language """
 
+
 class ProgrammingLanguage:
     """represents a programming langauge object"""
-    def __init__(self, typing, reflection, year):
+
+    def __init__(self, name, typing, reflection, year):
         """Initialise a Programming language instance"""
 
-        self.typing = typing.Title()
+        self.name = name
+        self.typing = typing
         self.reflection = reflection
         self.year = year
 
@@ -15,4 +18,6 @@ class ProgrammingLanguage:
         else:
             return False
 
-
+    def __str__(self):
+        return"{}, {} Typing, Reflection={}, First appeared in {}".format(self.name, self.typing, self.reflection,
+                                                                          self.year)
