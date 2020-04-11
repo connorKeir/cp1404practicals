@@ -8,7 +8,8 @@ def main():
     print(gibson.get_age())  # Expected 98. Got 98
     print(test_guitar.get_age())  # Expected 7. Got 7
 
-    print(gibson.is_vintage())  # Expected True. Got
-    print(test_guitar.is_vintage())  # Expected False. Got
+    print(gibson.is_vintage())  # Expected True. Got True
+    print(test_guitar.is_vintage())  # Expected False. Got False
+
 
 main()
