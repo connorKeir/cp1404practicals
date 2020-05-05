@@ -2,7 +2,7 @@
 
 
 class Guitar:
-    """represents a guitar object"""
+    """Represents a Guitar object."""
 
     current_year = 2020
 

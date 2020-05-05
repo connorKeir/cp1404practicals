@@ -2,7 +2,7 @@ from prac_06.guitar import Guitar
 
 
 def main():
-    """ Stores users guitars and displays details"""
+    """Stores users guitars and displays details."""
     print("My guitars!")
 
     guitars = []

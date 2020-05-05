@@ -2,7 +2,7 @@
 
 
 class ProgrammingLanguage:
-    """represents a programming langauge object"""
+    """Represents a programming language object."""
 
     def __init__(self, name, typing, reflection, year):
         """Initialise a Programming language instance"""
