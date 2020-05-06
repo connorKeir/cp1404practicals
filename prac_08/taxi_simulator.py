@@ -13,12 +13,20 @@ def main():
     while choice != 'q':
         print(MENU)
         choice = input(">>> ")
-        if choice == "c":
+        if choice == 'c':
+            print("Taxis available:")
             for i in taxis:
                 print("{} - {}".format(taxis.index(i), i))
-            current_taxi = input("Choose taxi: ")
+            current_taxi = int(input("Choose taxi: "))
             print("Bill to date: {:.2f}".format(taxi_bill))
-
+        if choice == 'd':
+            taxis[current_taxi].start_fare()
+            drive_distance = int(input("Drive how far? "))
+            taxis[current_taxi].drive(drive_distance)
+            trip_fare = taxis[current_taxi].get_fare()
+            print("Your {} trip cost you ${:.2f}".format(taxis[current_taxi].name, trip_fare))
+            taxi_bill += trip_fare
+            print("Bill to date: {:.2f}".format(taxi_bill))
 
 
 
