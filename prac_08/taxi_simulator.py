@@ -15,8 +15,7 @@ def main():
         choice = input(">>> ")
         if choice == 'c':
             print("Taxis available:")
-            for i in taxis:
-                print("{} - {}".format(taxis.index(i), i))
+            print_taxi_list(taxis)
             current_taxi = int(input("Choose taxi: "))
             print("Bill to date: {:.2f}".format(taxi_bill))
         if choice == 'd':
@@ -27,7 +26,14 @@ def main():
             print("Your {} trip cost you ${:.2f}".format(taxis[current_taxi].name, trip_fare))
             taxi_bill += trip_fare
             print("Bill to date: {:.2f}".format(taxi_bill))
+    print("Total trip cost: ${:.2f}".format(taxi_bill))
+    print("Taxis are now:")
+    print_taxi_list(taxis)
 
+
+def print_taxi_list(taxis):
+    for i in taxis:
+        print("{} - {}".format(taxis.index(i), i))
 
 
 main()
