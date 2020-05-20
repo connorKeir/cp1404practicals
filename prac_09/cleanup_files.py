@@ -1,19 +1,13 @@
 """
 CP1404/CP5632 Practical
-Demos of various os module examples
+Clean up the file names in Lyric folder
 """
 
 import os
 
 
-def get_fixed_filename(filename):
-    """Return a 'fixed' version of filename."""
-    new_name = filename.replace(" ", "_").replace(".TXT", ".txt")
-    return new_name
-
-
-def demo_walk():
-    """Process all subdirectories using os.walk()."""
+def main():
+    """ Clean up file names for neatness and presentation. """
     os.chdir('Lyrics')
     for directory_name, subdirectories, filenames in os.walk('.'):
         print("Directory:", directory_name)
@@ -30,4 +24,33 @@ def demo_walk():
             os.rename(old_path, new_path)
 
 
-demo_walk()
+def get_fixed_filename(filename):
+    """Return a 'fixed' version of filename."""
+    new_name = ''
+    new_names_char = []
+    for i, character in enumerate(filename[:-3]):
+        nex_char = filename[i + 1]
+        pre_char = filename[i - 1]
+        if pre_char == ' ':
+            new_names_char.append(character.upper())
+        elif character == ' ':
+            new_names_char.append('_')
+        elif character.islower() and nex_char.isupper():
+            new_names_char.append(character + '_')
+        elif character.isupper() and nex_char.isupper():
+            new_names_char.append(character + '_')
+        elif character != '_' and nex_char == '(':
+            new_names_char.append(character + '_')
+        elif pre_char == '(':
+            new_names_char.append(character.upper())
+
+        else:
+            new_names_char.append(character)
+    new_names_char.append('txt')
+    # print(new_names_char)
+    for i in new_names_char:
+        new_name += i
+    return new_name
+
+
+main()
