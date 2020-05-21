@@ -13,7 +13,10 @@ def main():
                 os.mkdir(files[1])
             except FileExistsError:
                 pass
-            shutil.move(element, files[1])
+            try:
+                shutil.move(element, files[1])
+            except shutil.Error:
+                pass
 
 
 main()
