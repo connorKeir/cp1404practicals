@@ -26,7 +26,7 @@ def main():
                     variable_check = True
             user_car.drive(drive_distance)
             print("The car drove {}km.".format(drive_distance))
-        if choice == 'r':
+        elif choice == 'r':
             variable_check = False
             while not variable_check:
                 user_fuel_refill = int(input("How many units of fuel do you want to add to the car? "))
@@ -36,6 +36,8 @@ def main():
                     variable_check = True
             user_car.add_fuel(user_fuel_refill)
             print("Added {} units of fuel".format(user_fuel_refill))
+        else:
+            print("Invalid choice")
         print(' ')
         print(user_car)
         print(MENU)
