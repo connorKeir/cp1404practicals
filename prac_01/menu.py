@@ -4,7 +4,7 @@ menu = """(H)ello
 (Q)uit"""
 
 print(menu)
-choice= input(">>> ")
+choice = input(">>> ")
 
 while choice != 'Q':
     if choice == 'H':
